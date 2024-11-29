@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do cliente</title>
+  <link rel="stylesheet" href="projeto_client.css">
+  <script src="projeto_client.js"></script>
+</head>
+
+<body>
+  <header class="header-container">
+    <div class="header-left">
+      <img src="img/logoz.png" alt="Logo da Empresa" class="logo">
+      <h1>Área do Cliente</h1>
+    </div>
+    
+    <div class="header-righto">
+      <button id="theme-toggle" onclick="toggleCor()">🌙 Modo Escuro</button>
+    </div>
+  </header>
+
+  <h1 id="title">
+    Bem vindo a área do cliente<br><br>
+    Nós criamos esta área da forma mais intuitiva possível, para que você possa gerenciar facilmente todos os nossos
+    serviços
+    <br>que você contratou, fazer orçamentos, consultar seus dados ou então falar conosco clicando no botão azul abaixo
+  </h1>
+
+  <div class="intro2">
+    <img id="photo2"
+    src="https://media.istockphoto.com/id/1133527393/pt/foto/smiling-young-couple-using-digital-tablet-at-home.jpg?s=612x612&w=0&k=20&c=HH7LJ60Uo9nBjJKJe_tXnab8sj_odAiXk0A3-CZyL9o="
+    alt="Imagem de apresentação">
+    <br>
+
+  
+  </div>
+
+  <div class="toggle-button" onclick="toggleContent(this)">
+    <div class="arrow">&#9654;</div>
+    <span id="titlemak">Faça um orçamento</span>
+  </div>
+  <div class="hidden-content" id="content">
+    <br>
+    <br>
+    <label for="modulos" id="title">Selecione os Módulos do ERP:</label>
+    <br>
+    <br>
+    <select id="modulos" name="modulos" multiple required>
+      <option value="financeiro">Financeiro</option>
+      <option value="contabilidade">Contabilidade</option>
+      <option value="compras">Compras</option>
+      <option value="vendas">Vendas</option>
+      <option value="estoque">Estoque</option>
+      <option value="producao">Produção</option>
+      <option value="rh">Recursos Humanos</option>
+      <option value="projetos">Projetos e Obras</option>
+      <option value="crm">CRM</option>
+      <option value="frotas">Frotas</option>
+      <option value="fiscal">Fiscal</option>
+    </select>
+    <br>
+    <label for="funcionalidades1" id="title">Especifique Funcionalidades Desejadas:</label>
+    <br>
+    <br>
+    <input id="funcionalidades1" name="funcionalidades1" rows="5"
+      placeholder="Descreva as funcionalidades que você espera de cada módulo." required></input>
+    <br>
+    <label for="tamanho" id="title">Tamanho da Empresa (Número de Funcionários):</label>
+    <br>
+    <br>
+    <input type="number" id="tamanho" name="tamanho" placeholder="Ex: 100" required>
+    <br>
+    <label for="integracoes" id="title">Necessita Integração com Outros Sistemas?</label>
+    <br>
+    <br>
+    <select id="integracoes" name="integracoes" required>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+    <br>
+    <label for="orcamento" id="title">Orçamento Disponível (em R$):</label>
+    <br>
+    <br>
+    <input type="number" id="orcamento" name="orcamento" placeholder="Ex: 50000" required>
+    <br>
+    <label for="prazo" id="title">Prazo de Implementação (em meses):</label>
+    <br>
+    <br>
+    <input type="number" id="prazo" name="prazo" placeholder="Ex: 6" required>
+    <br>
+    <button id="button" type="submit">Enviar</button>
+  </div>
+  
+  <div class="contact-button" onclick="inicializarModalContato()">
+    Dúvidas
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModalContato()">&times;</span>
+      <form action="/submit" method="POST" id="contactForm">
+        <label for="name2">Nome:</label>
+        <input type="text" id="name2" name="name2" required>
+        <label for="email2">Email:</label>
+        <input type="email2" id="email2" name="email2" required>
+        <label for="msg">Mensagem:</label>
+        <input id="msg" name="msg" rows="4" required></input>
+        <button id="button" type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
