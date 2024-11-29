@@ -428,8 +428,8 @@ select:focus {
 
   .btn-access-account {
     position: fixed;
-    top: 20px;    /* Distância do topo da página */
-    right: 120px;  /* Distância da borda direita da tela */
+    top: 20px;    
+    right: 120px;  
     padding: 10px 20px;
     font-size: 16px;
     background-color: #60a76a;
